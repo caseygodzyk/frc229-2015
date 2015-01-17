@@ -1,6 +1,7 @@
 package org.usfirst.frc.team229.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;;
 
 
 
@@ -14,6 +15,7 @@ public class OI {
 	 Joystick DriverPad = new Joystick(0);
 	 Joystick OperatorPad = new Joystick(2);
 	 Double strafe;
+	 SmartDashboard dash;
 
 	 
     public OI() {
@@ -22,12 +24,13 @@ public class OI {
     }
     
 
-    public double getStrafe() {
+    public double getStrafe() {  	
     	return (DriverPad.getRawAxis(2) - DriverPad.getRawAxis(3));
        
     }
     public double getSpeed() {
-        return DriverPad.getRawAxis(1);
+    	System.out.println(DriverPad.getRawAxis(1));
+        return DriverPad.getRawAxis(5);
     }
     
     public double getTurn() {

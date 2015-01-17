@@ -1,12 +1,12 @@
 
 package org.usfirst.frc.team229.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team229.robot.commands.HaloDrive;
 import org.usfirst.frc.team229.robot.subsystems.DriveTrain;
-import org.usfirst.frc.team229.robot.subsystems.BatDrive;
 //import org.usfirst.frc.team229.robot.commands.Strafe;
 
 
@@ -21,7 +21,6 @@ import org.usfirst.frc.team229.robot.subsystems.BatDrive;
 public class Robot extends IterativeRobot {
 
 	public static  DriveTrain drivetrain;
-	public static  BatDrive batdrive;
 	public static OI controller;
 	
 
@@ -33,13 +32,12 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
 		controller = new OI();
-		batdrive = new BatDrive();
 		drivetrain = new DriveTrain();
 		
         // instantiate the command used for the autonomous period
         autonomousCommand = new HaloDrive();
         //autonomousCommand = new StrafeLeft();
-        
+        SmartDashboard.putData(drivetrain);
     }
 	
 	public void disabledPeriodic() {

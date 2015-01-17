@@ -3,7 +3,6 @@ package org.usfirst.frc.team229.robot.commands;
 //import org.usfirst.frc.team229.robot.OI;
 import edu.wpi.first.wpilibj.command.Command;
 
-import org.usfirst.frc.team229.robot.subsystems.BatDrive;
 import org.usfirst.frc.team229.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team229.robot.Robot;
 //import org.usfirst.frc.team229.robot.OI;
@@ -17,9 +16,7 @@ public class HaloDrive extends Command {
 
 	public HaloDrive() {
         requires(Robot.drivetrain);
-    	requires(Robot.batdrive);
 
-        
 	}
 
     // Called just before this Command runs the first time
@@ -31,7 +28,7 @@ public class HaloDrive extends Command {
     	
     		Robot.drivetrain.halo(Robot.controller.getSpeed(),
                Robot.controller.getTurn());
-    		Robot.batdrive.Strafing(Robot.controller.getStrafe());
+    		Robot.drivetrain.Strafing(Robot.controller.getStrafe());
 
 
     }
