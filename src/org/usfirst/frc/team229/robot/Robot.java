@@ -23,6 +23,7 @@ public class Robot extends IterativeRobot {
 	public static  DriveTrain drivetrain;
 	public static OI controller;
 	
+	
 
     Command autonomousCommand;
 
@@ -33,6 +34,8 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		controller = new OI();
 		drivetrain = new DriveTrain();
+		
+		
 		
         // instantiate the command used for the autonomous period
         autonomousCommand = new HaloDrive();
