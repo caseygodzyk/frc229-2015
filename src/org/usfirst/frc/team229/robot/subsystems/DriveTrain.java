@@ -32,6 +32,7 @@ public class DriveTrain extends Subsystem {
     
     public void Strafing(double Strafe){
  	   Robin.set(Strafe);
+ 	   Batman.set(Strafe);
     }
 
     public void initDefaultCommand() {

@@ -21,7 +21,7 @@ import org.usfirst.frc.team229.robot.subsystems.DriveTrain;
 public class Robot extends IterativeRobot {
 
 	public static  DriveTrain drivetrain;
-	public static OI controller;
+	public static OI oi;
 	
 	
 
@@ -32,7 +32,7 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-		controller = new OI();
+		oi = new OI();
 		drivetrain = new DriveTrain();
 		
 		

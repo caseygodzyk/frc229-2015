@@ -26,9 +26,9 @@ public class HaloDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    		Robot.drivetrain.halo(Robot.controller.getSpeed(),
-               Robot.controller.getTurn());
-    		Robot.drivetrain.Strafing(Robot.controller.getStrafe());
+    		Robot.drivetrain.halo(Robot.oi.getSpeed(),
+               Robot.oi.getTurn());
+    		Robot.drivetrain.Strafing(Robot.oi.getStrafe());
 
 
     }
